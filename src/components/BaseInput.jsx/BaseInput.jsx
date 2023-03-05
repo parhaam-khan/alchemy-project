@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './BaseInput.module.scss'
 
 
-const BaseInput = () => {
+const BaseInput = (props) => {
     const[state,setState] = useState({
         walletAddress:''
     })
