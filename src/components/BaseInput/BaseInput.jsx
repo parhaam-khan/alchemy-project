@@ -1,16 +1,13 @@
-import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux'
+import { getAddress } from 'features/walletAddress/walletAddressSlice'
 import styles from './BaseInput.module.scss'
 
 
 const BaseInput = (props) => {
-    const[state,setState] = useState({
-        walletAddress:''
-    })
-
-const{walletAddress} = state;
+  const dispatch = useDispatch()
 
 const handleOnChange = (e) => {
-    setState({...state,[e.target.name] : e.target.value})
+    dispatch(getAddress(e.target.value))
     }
     return ( 
         <div className={styles.inputDiv}>
