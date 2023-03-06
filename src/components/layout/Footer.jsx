@@ -1,7 +1,9 @@
+import styles from './Layout.module.scss'
+
 const Footer = () => {
     return ( 
-        <div>
-            footer
+        <div className={styles.footer}>
+            powered by Alchemy SDK
         </div>
      );
 }

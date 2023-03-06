@@ -1,13 +1,17 @@
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import styles from "./Layout.module.scss";
 
 const Header = () => {
+  const inputValue = useSelector((state) => state.walletAddress.searchValue);
+
   return (
     <div className={styles.header}>
         <div className={styles.logo}>
             <h1 className={styles.projectName}>Aurora</h1>
         </div>
-      <nav className={styles.nav}>
+      {inputValue !== "" &&
+       <nav className={styles.nav}>
         <ul className={styles.menu}>
         <li>
             <NavLink to="/" end className={styles.menuItem}>
@@ -24,7 +28,7 @@ const Header = () => {
             NFTs
             </NavLink>
             </li>
-          <li>
+          {/* <li>
             <NavLink to="/gas" className={styles.menuItem}>
             Gas price
             </NavLink>
@@ -33,9 +37,9 @@ const Header = () => {
             <NavLink to="/transactions" className={styles.menuItem}>
             transactions
             </NavLink>
-            </li>
+            </li> */}
         </ul>
-      </nav>
+      </nav>}
     </div>
   );
 };

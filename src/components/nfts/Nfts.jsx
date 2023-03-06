@@ -11,7 +11,7 @@ const Nfts = (props) => {
     const[nftsMetaData,setNftsMetaData] = useState([])
     const inputValue = useSelector((state) => state.walletAddress.searchValue);
 
-console.log(nftsMetaData);
+// console.log(nftsMetaData);
 
     useEffect(() => {
          alchemy.nft.getNftsForOwner(inputValue).then((resp) => {
