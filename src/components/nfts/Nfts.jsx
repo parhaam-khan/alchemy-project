@@ -42,7 +42,8 @@ const Nfts = (props) => {
             <div className={styles.nftsDiv}>
              {nftsMetaData?.map((el) => (
                 <div className={styles.nftCard}>
-                 <img className={styles.nftImage} src={el.media.length > 0 ? el.media[0].thumbnail : notFoundImg} alt='nft'/>
+                 <img className={styles.nftImage}
+                  src={el.media.length > 0 && el.media[0].thumbnail ? el.media[0].thumbnail : notFoundImg} alt='nft'/>
                  <div className={styles.nftContent}>
                     <h2 className={styles.nftTitle}>{el.title ? el.title : 'no title'}</h2>
                     {/* <p className={styles.nftDesc}>{el.description}</p> */}
