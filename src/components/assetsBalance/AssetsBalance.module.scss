@@ -1,0 +1,16 @@
+.assets{
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .tokenInfo{
+        padding: 10px;
+        min-width: 200px;
+        height: 100px;
+        margin: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        .tokenName,.tokenAmount{
+            text-align: center;
+        }
+    }
+}
